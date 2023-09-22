@@ -31,3 +31,28 @@ git clone https://github.com/ChristianBergler/ANIMAL-SPOT.git
 ```sh
 
 ```
+
+# Error training model
+
+```
+  File "/mnt/data/dayhoff/home/u1133824/.conda/envs/animal-spot/lib/python3.8/site-packages/numpy/__init__.py", line 305, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'complex'.
+`np.complex` was a deprecated alias for the builtin `complex`. To avoid this error in existing code, use `complex` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.complex128` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+```
+
+numpy version is:
+
+```
+>>> print(np.__version__)
+1.24.3
+```
+
+Install numpy version < 1.24 solved the issue. 
+
+```sh
+conda install -c conda-forge numpy=1.23.5 
+```
+
