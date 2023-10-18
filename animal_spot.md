@@ -56,3 +56,18 @@ Install numpy version < 1.24 solved the issue.
 conda install -c conda-forge numpy=1.23.5 
 ```
 
+# Learn more about training parameter so can find the best one for our own training data 
+
+## Sequence Length
+
+
+
+
+
+## Frequency Bins
+
+See this image below, frequency bins means the vertical pixels got input in the network. 
+
+![freq_bins](animal-spot-figures/frequency_bins.jpg) 
+
+
